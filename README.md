@@ -2,7 +2,7 @@
 
 #Install PostgreSQL with this yum command as a root user:
 ```
-$ sudo su - 
+$ sudo su -
 $ yum -y install postgresql-server postgresql-devel postgresql-contrib
 ```
 
@@ -59,7 +59,7 @@ Next, create a new role named 'rails-dev' (for example) for the rails developmen
 postgres-# create role rails_dev with createdb login password 'test';
 ```
 
-Check the new role, you will see new role is created: 
+Check the new role, you will see new role is created:
 ```
 postgres-# \du
 ```
@@ -104,18 +104,18 @@ $ rails db:migrate
 
 Then start the rails server:
 ```
-rails s 
+rails s
 ```
 
+To connect to database again:
+```
+psql DBNAME USERNAME
+e.g. psql myrailsapp_development postgres
+```
 
-
-
-
-
-
-
-
-
- 
-
-
+Now in Psql you could run commands such as:
+```
+\? #list all the commands
+\l #list databases
+\conninfo #display information about current connection
+```
